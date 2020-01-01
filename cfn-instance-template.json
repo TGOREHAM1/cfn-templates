@@ -48,7 +48,7 @@
       },
       "ParamSecStackName": {
         "Type": "String",
-        "Description": "The name of the SecurityStack",
+        "Description": "The name of the SecurityStack located in cfn-sg-template.json",
         "MinLength": 1,
         "MaxLength": 128,
         "AllowedPattern": "^[a-zA-z][-a-zA-Z0-9]*$"
