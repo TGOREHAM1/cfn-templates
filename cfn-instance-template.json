@@ -226,7 +226,7 @@
           "SecurityGroupIds": [
             { 
               "Fn::ImportValue": {
-                "Fn::Sub": "${ParamSecStackName}-security-group-id"
+                "Fn::Sub": "${ParamSecStackName}-SecurityGroupId"
               }
             }
           ],
