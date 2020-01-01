@@ -45,6 +45,13 @@
           "t3a.nano",
           "t3a.small"
         ]
+      },
+      "ParamSecStackName": {
+        "Type": "String",
+        "Description": "The name of the SecurityStack",
+        "MinLength": 1,
+        "MaxLength": 128,
+        "AllowedPattern": "^[a-zA-z][-a-zA-Z0-9]*$"
       }
     },
     "Resources": {
@@ -218,10 +225,9 @@
           ],
           "SecurityGroupIds": [
             { 
-              "Fn::GetAtt": [
-                "SecurityGroup",
-                "GroupId"
-              ]
+              "Fn::ImportValue": {
+                "Fn::Sub": "${ParamSecStackName}-security-group-id"
+              }
             }
           ],
           "IamInstanceProfile": { "Ref": "InstanceProfile" }
