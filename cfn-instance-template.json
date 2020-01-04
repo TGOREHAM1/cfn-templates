@@ -1,6 +1,6 @@
 {
     "AWSTemplateFormatVersion" : "2010-09-09",
-    "Description": "A CFN template for learning",
+    "Description": "A CFN template for learning EC2/CFN",
     "Metadata": {
       "Author": { "Ref": "ParamAuthorName" }
     },
